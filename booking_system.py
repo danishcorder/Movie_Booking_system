@@ -36,9 +36,11 @@ class Theater:
             print(f"{idx}. {movie}")
 
     def show_available_seats(self):
-        for seat in self.seats:
+          print("\n💺 Seat Layout:")
+        for i,seat in enumerate(self.seats,1):
             print(seat, end='  ')
-        print()
+        if i%5==0:
+            print() '''new row after every 5 seats'''
 
     def book_seat(self, seat_number):
         if 0 < seat_number <= len(self.seats):
